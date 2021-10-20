@@ -1,0 +1,220 @@
+@import url(./css/font.css);
+*{
+    font-family: IRAN-Sans-Regular;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+/* :root{
+   --primarycolor:rgb(255, 165, 0);
+  --secendcolor: rgb(255, 165, 0); 
+}  */
+::selection{
+    color:orange;
+  }
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.text-center{
+    text-align: center;
+}
+.display-block{
+    display: block;
+}
+.box-shadow{
+    box-shadow: 1px 1px 1px 1px #efefef;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.course-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 34px;
+    padding: 100px;
+    color: #efefef;
+}
+body{
+    background-color: #009688;
+}
+.loop-wrapper{
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 250px;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+}
+.mountain{
+    position: absolute;
+    right: -900px;
+    bottom: 0px;
+    width: 2px;
+    height: 2px;
+    box-shadow:0 0 0 50px #4db6ac,
+     60px 50px 0 70px #4db6ac,
+     90px 90px 0 50px #4db6ac,
+     250px 250px 0 50px #4db6ac,
+     290px 320px 0 50px #4db6ac,
+     320px 400px 0 50px #4db6ac;
+     transform: rotate(130deg);
+}
+.hill{
+    position: absolute;
+    right: -900px;
+    bottom: -50px;
+    border-radius: 50%;
+    height: 20px;
+    width: 300px;
+    box-shadow: 0 0 0 50px #4db6ac,
+     -20px 0px 0 20px #4db6ac,
+     -90px 0px 0 50px #4db6ac,
+     250px 0px 0 50px #4db6ac,
+     290px 0px 0 50px #4db6ac,
+     620px 0px 0 50px #4db6ac;
+}
+.tree,.tree:nth-child(2),.tree:nth-child(3){
+    position: absolute;
+    height: 100px;
+    width: 64px;
+    bottom: -59px;
+    background: url("./img/park_white_48dp.svg") no-repeat;
+}
+.rock{
+    margin-top: -17%;
+    height: 5px;
+    width: 5px;
+    bottom: -2px;
+    border-radius: 20%;
+    position: absolute;
+    background: #fff;
+    right: 100%;
+}
+.truck,.wheels{
+    transition: all ease;
+    width: 85px;
+    margin-right: -60px;
+    position:absolute;
+    bottom: -10px;
+    right: 50%;
+    background: #eee;
+}
+.truck{
+    background: url("./img/local_shipping_white_48dp.svg") no-repeat ;
+    background-size: contain;
+    height: 60px;
+}
+.truck::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    box-shadow: -30px 28px 0 1px #fff,-35px 18px 0 1px #fff;
+}
+.wheels{
+    background:url("./img/local_shipping_white_48dpwheels.png");
+}
+.tree{
+    animation: tree 3s 0s linear infinite;
+}
+.tree:nth-child(2){
+    animation: tree2 2s 0.150s linear infinite;
+}
+.tree:nth-child(3){
+    animation: tree3 8s 0.050s linear infinite;
+}
+.rock{
+    animation: rock 4s -0.530s linear infinite;
+}
+.truck{
+    animation: truck 4s 0.80s ease infinite;
+}
+.wheels{
+    animation: truck 4s 0.0001s ease infinite;
+}
+.truck::before{
+    animation: wind 1.5s 0s ease infinite;
+}
+.mountain{
+    animation: mountain 6s  linear infinite;
+}
+.hill{
+    animation: hill 4s 2s linear infinite;
+}
+@keyframes tree{
+    0%{
+        transform: translateX(1350px);
+    }
+    100%{
+        transform: translateX(-50px);
+    }
+}
+@keyframes tree2{
+    0%{
+        transform: translateX(650px);
+    }
+    100%{
+        transform: translateX(-50px);
+    }
+}
+@keyframes tree3{
+    0%{
+        transform: translateX(2750px);
+    }
+    100%{
+        transform: translateX(-50px);
+    }
+}
+@keyframes rock{
+    0%{
+        transform: translateX(2750px);
+    }
+    100%{
+        transform: translateX(-50px);
+    }
+    0%{
+        right: -200px;
+    }
+    100%{
+        right: 2000px;
+    }
+}
+@keyframes truck{
+    6%{
+        transform: translateY(0);
+    }
+    7%{
+        transform: translateY(-6px);
+    }
+    8%{
+        transform: translateY(0px);
+    }
+    9%{
+        transform: translateY(-1px);
+    }
+    11%{
+        transform: translateY(0);
+    }
+}
+@keyframes wind{
+    50%{
+        transform: translateY(3px);
+    }
+}
+@keyframes mountain{
+    100%{
+        transform: translateX(-2000px) rotate(130deg);
+    }
+}
+@keyframes hill{
+    100%{
+        transform: translateX(-2000px);
+    }
+}

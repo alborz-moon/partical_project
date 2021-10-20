@@ -1,0 +1,66 @@
+@import url(./css/font.css);
+*{
+    font-family: IRAN-Sans-Regular;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+/* :root{
+   --primarycolor:rgb(255, 165, 0);
+  --secendcolor: rgb(255, 165, 0); 
+}  */
+::selection{
+    color:orange;
+  }
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.text-center{
+    text-align: center;
+}
+.display-block{
+    display: block;
+}
+.box-shadow{
+    box-shadow: 1px 1px 1px 1px #efefef;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.course-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 34px;
+    padding: 100px;
+    color: #efefef;
+}
+.card {
+    width: 300px;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    padding: 10px;
+    margin: 10px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card a{
+    margin: 10px 0;
+    display: block;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+}
