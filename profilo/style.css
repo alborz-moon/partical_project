@@ -1,0 +1,148 @@
+@import url(./css/font.css);
+*{
+    font-family: IRAN-Sans-Regular;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+/* :root{
+   --primarycolor:rgb(255, 165, 0);
+  --secendcolor: rgb(255, 165, 0); 
+}  */
+::selection{
+    color:orange;
+  }
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.text-center{
+    text-align: center;
+}
+.display-block{
+    display: block;
+}
+.box-shadow{
+    box-shadow: 1px 1px 1px 1px #efefef;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.course-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 34px;
+    padding: 100px;
+    color: #efefef;
+}
+body{
+    overflow: hidden;
+    font-size: 16px;
+    color: #efefef;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: deeppink;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.container form{
+    text-align: center;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+}
+.container form input{
+    height: 0; 
+    margin: 12px 0;
+    z-index: 12;
+}
+.container form input:checked{
+    outline: 0;
+    border: 0;
+}
+.container form input::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, .8);
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all .25 linear;
+    /* background-color: #fff; */
+}
+.container form input:checked::before{
+    background-color: #fff;
+}
+.container form input::after {
+    content: ""attr(title)"";
+    position: relative;
+    left: 30px;
+    opacity: 0;
+    display: block;
+    min-width: 120px;
+    font-size: 14px;
+    top: -5px;
+    transition: opacity .2s linear, left .2s linear;
+    color: #fff;
+    font-weight: bold;
+}
+.container form input:checked::after{
+    opacity: 1;
+    left: 20px;
+}
+.container form input::after:not(label){
+    opacity: 1;
+}
+.container form input:nth-child(1):checked ~ .labels label{
+    transform: translateY(-0%);
+}
+.container form input:nth-child(2):checked ~ .labels label{
+    transform: translateY(-100%);
+}
+.container form input:nth-child(3):checked ~ .labels label{
+    transform: translateY(-200%);
+}
+.container form input:nth-child(4):checked ~ .labels label{
+    transform: translateY(-300%);
+}
+.container form input:nth-child(5):checked ~ .labels label{
+    transform: translateY(-400%);
+}
+.container form .labels{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container form .labels label{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b2b2b;
+    transition: all .75s ease;
+}
+.container form .labels label:nth-child(odd){
+    background-color: #f500fa
+}
