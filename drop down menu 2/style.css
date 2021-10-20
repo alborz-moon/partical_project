@@ -1,0 +1,118 @@
+@import url(./css/font.css);
+*{
+    font-family: IRAN-Sans-Regular;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+/* :root{
+   --primarycolor:rgb(255, 165, 0);
+  --secendcolor: rgb(255, 165, 0); 
+}  */
+::selection{
+    color:orange;
+  }
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.text-center{
+    text-align: center;
+}
+.display-block{
+    display: block;
+}
+.box-shadow{
+    box-shadow: 1px 1px 1px 1px #efefef;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.course-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 34px;
+    padding: 100px;
+}
+body{
+    background-color: #fcdc29;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainMenu{
+    width: 250px;
+    display: block;
+    border-radius: 10px;
+    text-align: right;
+    border-radius: 4px;
+}
+.item{
+    border-top: 1px solid #ef584a;
+    border-radius: 4px;
+}
+.btn{
+    display: block;
+    padding: 15px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    position: relative;
+}
+.subMenu{
+    background-color: #273057;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .7s ;
+}
+.subMenu a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #394c7f;
+    position: relative;
+}
+.subMenu a::before{
+    content: '';
+    opacity: 0;
+    transition: opacity .3s;
+}
+.subMenu a:hover::before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    border-top: 24px solid transparent;
+    border-left: 11px solid #fcdc29;
+    border-bottom: 24px solid transparent ;
+}
+.subMenu a:hover::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    border-top: 24px solid transparent;
+    border-right: 11px solid #fcdc29;
+    border-bottom: 24px solid transparent ;
+}
+.subMenu a:hover{
+    background: #273057;
+    background: linear-gradient(to bottom,#273057 0%,#273057 50%, #304c7f );
+}
+.item:target .subMenu{
+    max-height: 200px;
+}
